@@ -5,6 +5,7 @@
 * packer
 * docker
 * docker hub account
+* kitchen
 
 ### How to build docker image
 
@@ -18,3 +19,18 @@ sudo packer build template.json
 
 ```
 
+### Verify that nginx is installed
+
+#### Manual
+
+```
+sudo kitchen list
+sudo kitchen converge
+sudo kitchen verify
+sudo kitchen destroy
+
+```
+
+#### Automatic
+
+`sudo kitchen test`
