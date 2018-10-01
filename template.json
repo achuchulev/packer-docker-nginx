@@ -1,0 +1,25 @@
+{
+"builders": [
+  {
+    "type": "docker",
+    "image": "ubuntu",
+    "commit": true
+  }
+ ],
+"provisioners": [
+   {
+    "type": "shell",
+    "script": "./nginx.sh"
+    }
+  ],
+"post-processors": [
+   [
+      {
+        "type": "docker-tag",
+        "repository": "achuchulev/packer-nginx",
+        "tag": "nginx-0.1"
+      },
+      "docker-push"
+   ]
+ ]
+}
