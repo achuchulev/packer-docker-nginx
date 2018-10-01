@@ -1,0 +1,21 @@
+---
+driver:
+  name: docker
+  provision_command: "mkdir -p /run/sshd"
+
+verifier:
+  name: inspec
+  systems:
+    - name: default
+      backend: ssh
+      key_files:
+        - ~/.ssh/id_rsa
+
+platforms:
+  - name: ubuntu
+    driver_config:
+      image: achuchulev/packer-nginx:nginx-0.1
+    platform: ubuntu
+
+suites:
+- name: default
