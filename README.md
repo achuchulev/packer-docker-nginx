@@ -24,6 +24,7 @@ sudo packer build template.json
 #### Manual
 
 ```
+
 sudo kitchen list
 sudo kitchen converge
 sudo kitchen verify
