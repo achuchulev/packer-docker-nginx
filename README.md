@@ -10,7 +10,6 @@
 ### How to build docker image
 
 ```
-
 git clone git@github.com:achuchulev/packer-docker-nginx.git
 cd packer-docker-nginx/
 sudo packer validate template.json
@@ -24,8 +23,6 @@ sudo packer build template.json
 #### Manual
 
 ```
-
-sudo kitchen list
 sudo kitchen converge
 sudo kitchen verify
 sudo kitchen destroy
