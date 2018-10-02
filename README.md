@@ -16,7 +16,7 @@
    cd packer-docker-nginx/
    ```
 
-* Update the following lines to match your Docker Hub repo
+* Update the following lines to match your Docker Hub repo / tag
 
   * template.json 
    
