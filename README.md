@@ -32,22 +32,22 @@
   
 * Build docker image and push it to Docker Hub
    
-```
-sudo packer validate template.json
-sudo docker login -u <docker_hub_user> -p <docker_hub_pass>
-sudo packer build template.json
-```
+  ```
+  sudo packer validate template.json
+  sudo docker login -u <docker_hub_user> -p <docker_hub_pass>
+  sudo packer build template.json
+  ```
 
 ### Verify that nginx is installed
 
 #### Manual
 
-```
-sudo kitchen converge
-sudo kitchen verify
-sudo kitchen destroy
-```
+  ```
+  sudo kitchen converge
+  sudo kitchen verify
+  sudo kitchen destroy
+  ```
 
 #### Automatic
 
-`sudo kitchen test`
+  `sudo kitchen test`
