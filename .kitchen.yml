@@ -1,21 +1,24 @@
 ---
 driver:
   name: docker
+  use_sudo: false
   provision_command: "mkdir -p /run/sshd"
+
+provisioner:
+  name: shell
 
 verifier:
   name: inspec
-  systems:
-    - name: default
-      backend: ssh
-      key_files:
-        - ~/.ssh/id_rsa
 
 platforms:
   - name: ubuntu
     driver_config:
       image: achuchulev/packer-nginx:nginx-0.1
-    platform: ubuntu
+      platform: ubuntu
+      remove_images: true
 
 suites:
 - name: default
+  verifier:
+      inspec_tests:
+        - test/integration/default
