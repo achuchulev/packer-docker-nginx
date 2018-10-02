@@ -2,7 +2,8 @@
 driver:
   name: docker
   use_sudo: false
-  provision_command: "mkdir -p /run/sshd"
+  #workaround for ubuntu 18.04
+  #provision_command: "mkdir -p /run/sshd"
 
 provisioner:
   name: shell
