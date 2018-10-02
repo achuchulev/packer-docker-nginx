@@ -15,7 +15,6 @@ cd packer-docker-nginx/
 sudo packer validate template.json
 sudo docker login -u <docker_hub_user> -p <docker_hub_pass>
 sudo packer build template.json
-
 ```
 
 ### Verify that nginx is installed
@@ -26,7 +25,6 @@ sudo packer build template.json
 sudo kitchen converge
 sudo kitchen verify
 sudo kitchen destroy
-
 ```
 
 #### Automatic
