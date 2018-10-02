@@ -40,7 +40,7 @@
 
 ### Verify that nginx is installed
 
-#### Manual
+* Manual
 
   ```
   sudo kitchen converge
@@ -48,6 +48,6 @@
   sudo kitchen destroy
   ```
 
-#### Automatic
+* Automatic
 
   `sudo kitchen test`
