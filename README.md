@@ -1,36 +1,34 @@
-# Packer template to build a docker image with nginx that is uploaded to Docker HUB
+# A Packer template that builds a Docker image with built-in nginx server which is being uploaded to Docker HUB
 
-### Prerequisit
+### Prerequisites
 
 * packer
 * docker
 * docker hub account
 * kitchen
 
-### How to build docker image
-
-* Get the repo and got to the repo directory
+#### Get the repo and got to the repo directory
   
    ```
    git clone git@github.com:achuchulev/packer-docker-nginx.git
    cd packer-docker-nginx/
    ```
 
-* Update the following lines to match your Docker Hub repo / tag
+#### Update the following lines to match your Docker Hub repo and tag
 
-  * template.json 
+  * [template.json](https://github.com/achuchulev/packer-docker-nginx/blob/master/template.json)
    
     ```
     "repository": "achuchulev/packer-nginx",
     "tag": "nginx-0.1"
     ```
 
-  * .kitchen.yml
+  * [.kitchen.yml](https://github.com/achuchulev/packer-docker-nginx/blob/master/.kitchen.yml)
 
     `image: achuchulev/packer-nginx:nginx-0.1`
     
   
-* Build docker image and push it to Docker Hub
+## Build docker image and push it to Docker Hub
    
   ```
   sudo packer validate template.json
@@ -38,7 +36,7 @@
   sudo packer build template.json
   ```
 
-### Verify that nginx is installed
+## Test that nginx is installed on the image
 
 * Manual
 
