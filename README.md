@@ -1,20 +1,22 @@
-# A Packer template that builds a Docker image with built-in nginx server which is being uploaded to Docker HUB
+# A Packer template to build Docker image with built-in nginx server and upload it to Docker HUB
 
 ### Prerequisites
+
+#### Software requirenments
 
 * packer
 * docker
 * docker hub account
 * kitchen
 
-#### Get the repo and got to the repo directory
+#### Clone repo and got to the repo directory
   
    ```
    git clone git@github.com:achuchulev/packer-docker-nginx.git
    cd packer-docker-nginx/
    ```
 
-#### Update the following lines to match your Docker Hub repo and tag
+#### Update packer template to specify your Docker Hub repo name and release tag for the new image 
 
   * [template.json](https://github.com/achuchulev/packer-docker-nginx/blob/master/template.json)
    
@@ -22,6 +24,8 @@
     "repository": "achuchulev/packer-nginx",
     "tag": "nginx-0.1"
     ```
+    
+ #### Update kitchen configuration file to match your Docker image to be test
 
   * [.kitchen.yml](https://github.com/achuchulev/packer-docker-nginx/blob/master/.kitchen.yml)
 
