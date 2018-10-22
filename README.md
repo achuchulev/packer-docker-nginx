@@ -1,6 +1,6 @@
 # A Packer template to build Docker image with built-in nginx server and upload it to Docker HUB
 
-### Prerequisites
+## Prerequisites
 
 #### Software requirenments
 
