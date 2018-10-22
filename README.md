@@ -11,45 +11,44 @@
 
 #### Clone repo and got to the repo directory
   
-   ```
-   git clone git@github.com:achuchulev/packer-docker-nginx.git
-   cd packer-docker-nginx/
-   ```
+```
+git clone git@github.com:achuchulev/packer-docker-nginx.git
+cd packer-docker-nginx/
+```
 
 #### Update packer template to specify your Docker Hub repo name and release tag for the new image 
 
-  * [template.json](https://github.com/achuchulev/packer-docker-nginx/blob/master/template.json)
+[template.json](https://github.com/achuchulev/packer-docker-nginx/blob/master/template.json)
    
-    ```
-    "repository": "achuchulev/packer-nginx",
-    "tag": "nginx-0.1"
-    ```
+```
+"repository": "achuchulev/packer-nginx",
+"tag": "nginx-0.1"
+```
     
- #### Update kitchen configuration file to match your Docker image to be test
+#### Update kitchen configuration file to match your Docker image to be test
 
-  * [.kitchen.yml](https://github.com/achuchulev/packer-docker-nginx/blob/master/.kitchen.yml)
+[.kitchen.yml](https://github.com/achuchulev/packer-docker-nginx/blob/master/.kitchen.yml)
 
-    `image: achuchulev/packer-nginx:nginx-0.1`
-    
+`image: achuchulev/packer-nginx:nginx-0.1`
   
 ## Build docker image and push it to Docker Hub
    
-  ```
-  sudo packer validate template.json
-  sudo docker login -u <docker_hub_user> -p <docker_hub_pass>
-  sudo packer build template.json
-  ```
+```
+sudo packer validate template.json
+sudo docker login -u <docker_hub_user> -p <docker_hub_pass>
+sudo packer build template.json
+```
 
 ## Test that nginx is installed on the image
 
-* Manual
+Manual
 
-  ```
-  sudo kitchen converge
-  sudo kitchen verify
-  sudo kitchen destroy
-  ```
+```
+sudo kitchen converge
+sudo kitchen verify
+sudo kitchen destroy
+```
 
-* Automatic
+Automatic
 
-  `sudo kitchen test`
+`sudo kitchen test`
