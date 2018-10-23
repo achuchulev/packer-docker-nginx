@@ -37,13 +37,15 @@ sudo packer build template.json
 
 ## Test that nginx is installed on the image
 
+### on Linux
+
 #### Prerequisit
 
 * kitchen-docker driver installed
 
 run: `gem install kitchen-docker`
 
-### Manual
+#### Manual
 
 ```
 sudo kitchen converge
@@ -51,6 +53,41 @@ sudo kitchen verify
 sudo kitchen destroy
 ```
 
-### Automatic
+#### Automatic
 
 `sudo kitchen test`
+
+### on MAC
+
+
+#### Install rbenv to use ruby version 2.3.1
+
+```
+brew install rbenv
+rbenv install 2.3.1
+rbenv local 2.3.1
+rbenv versions
+```
+
+#### Add the following lines to your ~/.bash_profile:
+
+```
+eval "$(rbenv init -)"
+true
+export PATH="$HOME/.rbenv/bin:$PATH"
+```
+
+#### Reload profile: 
+
+`source ~/.bash_profile`
+
+#### Install bundler
+
+```
+gem install bundler
+bundle install
+```
+
+#### Run the test: 
+
+`bundle exec kitchen test`
