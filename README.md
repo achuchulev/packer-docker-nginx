@@ -41,7 +41,7 @@ sudo packer build template.json
 
 ## Test that nginx is installed on the image
 
-### Prerequisit
+#### Prerequisit
 
 * You need to have kitchen-docker driver installed
 
