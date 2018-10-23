@@ -1,4 +1,4 @@
-# A Packer template to build Docker image with built-in nginx server and upload it to Docker HUB
+# Build Docker image with Packer that have nginx installed and is uploaded to Docker HUB. Kitchen test is included
 
 ## Prerequisites
 
