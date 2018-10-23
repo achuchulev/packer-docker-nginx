@@ -45,15 +45,7 @@ sudo packer build template.json
 
 run: `gem install kitchen-docker`
 
-#### Manual
-
-```
-sudo kitchen converge
-sudo kitchen verify
-sudo kitchen destroy
-```
-
-#### Automatic
+#### Run the test
 
 `sudo kitchen test`
 
