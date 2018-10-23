@@ -43,9 +43,9 @@ sudo packer build template.json
 
 #### Prerequisit
 
-* You need to have kitchen-docker driver installed
+* kitchen-docker driver installed
 
-run `gem install kitchen-docker`
+run: `gem install kitchen-docker`
 
 ### Manual
 
