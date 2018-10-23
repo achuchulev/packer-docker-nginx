@@ -41,7 +41,13 @@ sudo packer build template.json
 
 ## Test that nginx is installed on the image
 
-Manual
+### Prerequisit
+
+* You need to have kitchen-docker driver installed
+
+run `gem install kitchen-docker`
+
+### Manual
 
 ```
 sudo kitchen converge
@@ -49,6 +55,6 @@ sudo kitchen verify
 sudo kitchen destroy
 ```
 
-Automatic
+### Automatic
 
 `sudo kitchen test`
