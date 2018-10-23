@@ -39,20 +39,15 @@ sudo packer build template.json
 
 ### on Linux
 
-#### Prerequisit
-
-* kitchen-docker driver installed
-
-run: `gem install kitchen-docker`
-
 #### Run the test
 
 `sudo kitchen test`
 
 ### on MAC
 
+#### Prerequisit
 
-#### Install rbenv to use ruby version 2.3.1
+##### Install rbenv to use ruby version 2.3.1
 
 ```
 brew install rbenv
@@ -61,7 +56,7 @@ rbenv local 2.3.1
 rbenv versions
 ```
 
-#### Add the following lines to your ~/.bash_profile:
+##### Add the following lines to your ~/.bash_profile:
 
 ```
 eval "$(rbenv init -)"
@@ -69,11 +64,11 @@ true
 export PATH="$HOME/.rbenv/bin:$PATH"
 ```
 
-#### Reload profile: 
+##### Reload profile: 
 
 `source ~/.bash_profile`
 
-#### Install bundler
+##### Install bundler
 
 ```
 gem install bundler
