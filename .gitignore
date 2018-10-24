@@ -1,3 +1,5 @@
 # Cache objects
 .kitchen/
 Gemfile.lock
+*.log
+.vagrant/
