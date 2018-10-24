@@ -36,10 +36,6 @@ cd packer-docker-nginx/
 "repository": "achuchulev/packer-nginx",
 "tag": "nginx-0.1"
 ```
-    
-#### Update _[.kitchen.yml](https://github.com/achuchulev/packer-docker-nginx/blob/master/.kitchen.yml)_ file to match your Docker image to be test
-
-`image: achuchulev/packer-nginx:nginx-0.1`
    
 #### Validate Packer template
 `sudo packer validate template.json`
@@ -52,6 +48,11 @@ cd packer-docker-nginx/
 
 
 ## Test Docker image
+
+    
+#### Update _[.kitchen.yml](https://github.com/achuchulev/packer-docker-nginx/blob/master/.kitchen.yml)_ file to match your Docker image to be test
+
+`image: achuchulev/packer-nginx:nginx-0.1`
 
 #### Run the test to verify that nginx is installed
 
