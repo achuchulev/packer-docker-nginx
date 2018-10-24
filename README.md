@@ -26,7 +26,7 @@ vagrant ssh
 #### From VM CLI clone repo and got to the repo directory
   
 ```
-git clone git@github.com:achuchulev/packer-docker-nginx.git
+git clone https://github.com/achuchulev/packer-docker-nginx.git
 cd packer-docker-nginx/
 ```
 
