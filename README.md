@@ -57,3 +57,19 @@ cd packer-docker-nginx/
 #### Run the test to verify that nginx is installed
 
 `sudo kitchen test`
+
+_Sucessful test should looks like:_
+
+```
+  ✔  nginx-package: System Package nginx should be installed
+     ✔  System Package nginx should be installed
+  ✔  nginx-config: File /etc/nginx/nginx.conf should exist; File /etc/nginx/ngi...
+     ✔  File /etc/nginx/nginx.conf should exist
+     ✔  File /etc/nginx/nginx.conf owner should eq "root"
+     ✔  File /etc/nginx/nginx.conf mode should cmp == "420"
+  ✔  nginx-tls: Nginx Environment support_info should match /TLS/
+     ✔  Nginx Environment support_info should match /TLS/
+
+Profile Summary: 3 successful controls, 0 control failures, 0 controls skipped
+Test Summary: 5 successful, 0 failures, 0 skipped
+```
