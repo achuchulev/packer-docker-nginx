@@ -30,15 +30,13 @@ cd packer-docker-nginx/
 "tag": "nginx-0.1"
 ```
    
-#### Validate Packer template
-`sudo packer validate template.json`
-
-#### Login to Docker Hub
-`sudo docker login -u <docker_hub_user> -p <docker_hub_pass>`
-
 #### Build docker image and push it to Docker Hub
-`sudo packer build template.json`
 
+```
+sudo packer validate template.json
+sudo docker login -u <docker_hub_user> -p <docker_hub_pass>
+sudo packer build template.json
+```
 
 ## Test Docker image
 
