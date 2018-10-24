@@ -30,7 +30,7 @@ git clone git@github.com:achuchulev/packer-docker-nginx.git
 cd packer-docker-nginx/
 ```
 
-#### Update packer _[template.json](https://github.com/achuchulev/packer-docker-nginx/blob/master/template.json)_ to specify your Docker Hub repo name and release tag for the new image 
+#### Update below lines within packer _[template.json](https://github.com/achuchulev/packer-docker-nginx/blob/master/template.json)_ to specify your Docker Hub repo name and release tag for the new image 
    
 ```
 "repository": "achuchulev/packer-nginx",
@@ -50,7 +50,7 @@ cd packer-docker-nginx/
 ## Test Docker image
 
     
-#### Update _[.kitchen.yml](https://github.com/achuchulev/packer-docker-nginx/blob/master/.kitchen.yml)_ file to match your Docker image to be test
+#### Update below line within _[.kitchen.yml](https://github.com/achuchulev/packer-docker-nginx/blob/master/.kitchen.yml)_ file to match your Docker image to be test
 
 `image: achuchulev/packer-nginx:nginx-0.1`
 
