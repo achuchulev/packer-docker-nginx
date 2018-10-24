@@ -58,7 +58,7 @@ cd packer-docker-nginx/
 
 `sudo kitchen test`
 
-_Sucessful test should looks like:_
+_Passing test should look like:_
 
 ```
   ✔  nginx-package: System Package nginx should be installed
