@@ -12,7 +12,7 @@
 
 ## Build docker image
 
-#### To build and test Docker image the following GitHub repo [Ubuntu Xenial - Vagrant box with docker installed](https://github.com/kikitux/xenial-docker) is used to run xenial Vagrant box that has docker, packer and kitchen pre-installed
+#### To _build_ and _test_ Docker image the following GitHub repo [Ubuntu Xenial - Vagrant box with docker installed](https://github.com/kikitux/xenial-docker) is used to run xenial Vagrant box that has docker, packer and kitchen pre-installed
 
 #### Clone GitHub repo, start and ssh to the virtualbox VM
 
