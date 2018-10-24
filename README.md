@@ -2,21 +2,26 @@
 
 ## Prerequisites
 
+* vagrant
 * docker hub account
 * virtualbox
 
 ## Build docker image
 
-#### Clone following GitHub repo to start and ssh to Vagrant box with pre-installed Packer and Docker
+#### Clone repo and change directory
+  
+```
+git clone https://github.com/achuchulev/packer-docker-nginx.git
+cd packer-docker-nginx/
+```
+#### Run Vagrant box and ssh to it
 
 ```
-git clone https://github.com/kikitux/xenial-docker.git
-cd xenial-docker/
 vagrant up
 vagrant ssh
 ```
 
-#### From Vagrant box clone repo and got to the repo directory
+#### Clone repo from Vagrant box and change directory
   
 ```
 git clone https://github.com/achuchulev/packer-docker-nginx.git
