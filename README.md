@@ -23,7 +23,7 @@ vagrant up
 vagrant ssh
 ```
 
-#### From VM cli clone repo and got to the repo directory
+#### From VM CLI clone repo and got to the repo directory
   
 ```
 git clone git@github.com:achuchulev/packer-docker-nginx.git
@@ -51,8 +51,8 @@ cd packer-docker-nginx/
 `sudo packer build template.json`
 
 
-## Test Docker image that nginx is installed
+## Test Docker image
 
-#### Run the test
+#### Run the test to verify that nginx is installed
 
 `sudo kitchen test`
