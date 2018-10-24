@@ -19,13 +19,7 @@ cd packer-docker-nginx/
 ```
 vagrant up
 vagrant ssh
-```
-
-#### Clone repo from Vagrant box and change directory
-  
-```
-git clone https://github.com/achuchulev/packer-docker-nginx.git
-cd packer-docker-nginx/
+cd /vagrant
 ```
 
 #### Update _template.json_ with your Docker Hub repo name and release tag for the new image 
