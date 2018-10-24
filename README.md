@@ -2,19 +2,12 @@
 
 ## Prerequisites
 
-#### Software requirenments
-
-* packer
-* docker
 * docker hub account
-* kitchen
 * virtualbox
 
 ## Build docker image
 
-#### To _build_ and _test_ Docker image the following GitHub repo [Ubuntu Xenial - Vagrant box with docker installed](https://github.com/kikitux/xenial-docker) is used to run xenial Vagrant box that has docker, packer and kitchen pre-installed
-
-#### Clone GitHub repo, start and ssh to the virtualbox VM
+#### Clone following GitHub repo to start and ssh to Vagrant box with pre-installed Packer and Docker
 
 ```
 git clone https://github.com/kikitux/xenial-docker.git
@@ -23,14 +16,14 @@ vagrant up
 vagrant ssh
 ```
 
-#### From VM CLI clone repo and got to the repo directory
+#### From Vagrant box clone repo and got to the repo directory
   
 ```
 git clone https://github.com/achuchulev/packer-docker-nginx.git
 cd packer-docker-nginx/
 ```
 
-#### Update below lines within packer _[template.json](https://github.com/achuchulev/packer-docker-nginx/blob/master/template.json)_ to specify your Docker Hub repo name and release tag for the new image 
+#### Update _template.json_ with your Docker Hub repo name and release tag for the new image 
    
 ```
 "repository": "achuchulev/packer-nginx",
@@ -50,11 +43,11 @@ cd packer-docker-nginx/
 ## Test Docker image
 
     
-#### Update below line within _[.kitchen.yml](https://github.com/achuchulev/packer-docker-nginx/blob/master/.kitchen.yml)_ file to match your Docker image to be test
+#### Update _.kitchen.yml_ with your Docker image to be test
 
 `image: achuchulev/packer-nginx:nginx-0.1`
 
-#### Run the test to verify that nginx is installed
+#### Run the test to verify that nginx is installed with default configuration
 
 `sudo kitchen test`
 
