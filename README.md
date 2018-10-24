@@ -8,8 +8,22 @@
 * docker
 * docker hub account
 * kitchen
+* virtualbox
 
-#### Clone repo and got to the repo directory
+## Build docker image
+
+#### To build and test Docker image the following GitHub repo [Ubuntu Xenial - Vagrant box with docker installed](https://github.com/kikitux/xenial-docker) is used to run xenial Vagrant box that has docker, packer and kitchen pre-installed
+
+#### Clone GitHub repo, start and ssh to the virtualbox VM
+
+```
+git clone https://github.com/kikitux/xenial-docker.git
+cd xenial-docker/
+vagrant up
+vagrant ssh
+```
+
+#### From VM cli clone repo and got to the repo directory
   
 ```
 git clone git@github.com:achuchulev/packer-docker-nginx.git
@@ -26,55 +40,19 @@ cd packer-docker-nginx/
 #### Update _[.kitchen.yml](https://github.com/achuchulev/packer-docker-nginx/blob/master/.kitchen.yml)_ file to match your Docker image to be test
 
 `image: achuchulev/packer-nginx:nginx-0.1`
-  
-## Build docker image and push it to Docker Hub
    
-```
-sudo packer validate template.json
-sudo docker login -u <docker_hub_user> -p <docker_hub_pass>
-sudo packer build template.json
-```
+#### Validate Packer template
+`sudo packer validate template.json`
 
-## Test that nginx is installed on the image
+#### Login to Docker Hub
+`sudo docker login -u <docker_hub_user> -p <docker_hub_pass>`
 
-### on Linux
+#### Build docker image and push it to Docker Hub
+`sudo packer build template.json`
+
+
+## Test Docker image that nginx is installed
 
 #### Run the test
 
 `sudo kitchen test`
-
-### on MAC
-
-#### Prerequisit
-
-##### Install rbenv to use ruby version 2.3.1
-
-```
-brew install rbenv
-rbenv install 2.3.1
-rbenv local 2.3.1
-rbenv versions
-```
-
-##### Add the following lines to your ~/.bash_profile:
-
-```
-eval "$(rbenv init -)"
-true
-export PATH="$HOME/.rbenv/bin:$PATH"
-```
-
-##### Reload profile: 
-
-`source ~/.bash_profile`
-
-##### Install bundler
-
-```
-gem install bundler
-bundle install
-```
-
-#### Run the test: 
-
-`bundle exec kitchen test`
